@@ -1,11 +1,11 @@
 
 # Problem 2: Determinant of a 3x3 Matrix
-
-## Given
+## Question
+### Given
 
 A = [[1, 2, -1], [0, 3, 4], [2, 1, 5]]
-
-## 1. Calculate the Determinant Using Sarrus' Rule
+## Solution
+### 1. Calculate the Determinant Using Sarrus' Rule
 
 det(A) = (1 * 3 * 5) + (2 * 4 * 2) + (-1 * 0 * 1)
 
@@ -23,7 +23,7 @@ det(A) = 31 - (-2)
 
 det(A) = 33
 
-## 2. Verify Using a Determinant Property
+### 2. Verify Using a Determinant Property
 
 Apply the row operation:
 
@@ -43,7 +43,7 @@ det(A) = 21 + 12
 
 det(A) = 33
 
-## Final Result
+### Final Result
 
 det(A) = 33
 

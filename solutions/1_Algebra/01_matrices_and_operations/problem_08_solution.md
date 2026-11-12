@@ -1,12 +1,12 @@
 # Problem 08: Row Operations and Their Reversibility
-
-## Given
+## Question
+### Given
 
 A = [[1, 2, -1],
      [2, 4, 1],
      [-1, 1, 3]]
-
-## 1. First Operation
+## Solution
+### 1. First Operation
 
 R2 <- R2 - 2R1
 
@@ -20,7 +20,7 @@ Reverse operation:
 
 R2 <- R2 + 2R1
 
-## 2. Second Operation
+### 2. Second Operation
 
 R3 <- R3 + R1
 
@@ -34,7 +34,7 @@ Reverse operation:
 
 R3 <- R3 - R1
 
-## 3. Third Operation
+### 3. Third Operation
 
 Interchange R2 and R3.
 
@@ -48,7 +48,7 @@ Reverse operation:
 
 Interchange R2 and R3 again.
 
-## 4. Final Results
+### 4. Final Results
 
 Final matrix:
 
@@ -58,7 +58,7 @@ Final matrix:
 
 All three row operations are reversible.
 
-## Explanation
+### Explanation
 
 Each row operation has an inverse operation that restores the previous matrix.
 

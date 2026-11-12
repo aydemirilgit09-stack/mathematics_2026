@@ -1,15 +1,15 @@
 
 # Problem 11: When Do Matrices Commute?
-
-## Given
+## Question
+### Given
 
 A = [[1, 1],
      [0, 1]]
 
 B = [[a, b],
      [c, d]]
-
-## 1. Calculate AB
+## Solution
+### 1. Calculate AB
 
 AB = [[1, 1],
       [0, 1]] * [[a, b],
@@ -18,7 +18,7 @@ AB = [[1, 1],
 AB = [[a + c, b + d],
       [c, d]]
 
-## 2. Calculate BA
+### 2. Calculate BA
 
 BA = [[a, b],
       [c, d]] * [[1, 1],
@@ -27,7 +27,7 @@ BA = [[a, b],
 BA = [[a, a + b],
       [c, c + d]]
 
-## 3. Set AB Equal to BA
+### 3. Set AB Equal to BA
 
 For AB = BA, corresponding entries must be equal.
 
@@ -41,14 +41,14 @@ Therefore, d = a.
 
 The remaining equations give the same condition c = 0.
 
-## 4. General Form of Matrix B
+### 4. General Form of Matrix B
 
 Since c = 0 and d = a:
 
 B = [[a, b],
      [0, a]]
 
-## 5. Final Result
+### 5. Final Result
 
 AB = BA if and only if:
 
@@ -63,7 +63,7 @@ B = [[a, b],
 
 where a and b can be any real numbers.
 
-## Explanation
+### Explanation
 
 Two matrices commute when their multiplication gives the same result in both orders.
 

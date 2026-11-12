@@ -1,12 +1,12 @@
 
 # Problem 14: Rotation Matrices
-
-## Given
+## Question
+### Given
 
 R(theta) = [[cos(theta), -sin(theta)],
             [sin(theta),  cos(theta)]]
-
-## 1. Calculate R(alpha) * R(beta)
+## Solution
+### 1. Calculate R(alpha) * R(beta)
 
 R(alpha) = [[cos(alpha), -sin(alpha)],
             [sin(alpha),  cos(alpha)]]
@@ -24,7 +24,7 @@ R(alpha) * R(beta) =
  [sin(alpha)cos(beta) + cos(alpha)sin(beta),
   -sin(alpha)sin(beta) + cos(alpha)cos(beta)]]
 
-## 2. Apply Trigonometric Identities
+### 2. Apply Trigonometric Identities
 
 Using the angle-sum formulas:
 
@@ -39,11 +39,11 @@ R(alpha) * R(beta) =
 [[cos(alpha + beta), -sin(alpha + beta)],
  [sin(alpha + beta),  cos(alpha + beta)]]
 
-## 3. Final Result
+### 3. Final Result
 
 R(alpha) * R(beta) = R(alpha + beta)
 
-## 4. Geometric Explanation
+### 4. Geometric Explanation
 
 A rotation matrix rotates a vector around the origin.
 

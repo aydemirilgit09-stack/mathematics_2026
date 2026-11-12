@@ -1,22 +1,27 @@
 
 # Problem 03: When Can Matrices Be Multiplied?
 
-## Given
+## Question
+### Given
 
 A = 2 x 3
 B = 3 x 4
 C = 4 x 2
 D = 2 x 2
 
-## 1. Matrix Multiplication Rules
+    For the products AB, BA, BC, CB, AC, CA, AD, and DA:
+
+Determine whether each matrix multiplication is defined. If it is defined, state the dimensions of the resulting matrix. Justify each answer using the matrix multiplication compatibility rule.
+
+## Solution
 
 Two matrices can be multiplied if the number of columns in the first matrix equals the number of rows in the second matrix.
 
 The resulting matrix has the number of rows of the first matrix and the number of columns of the second matrix.
 
-## 2. Checking Each Product
+###  Checking Each Product
 
-### AB
+#### AB
 
 A (2 x 3) * B (3 x 4)
 
@@ -72,7 +77,7 @@ Defined because 2 = 2.
 
 Result dimension: 2 x 3.
 
-## 3. Final Results
+### 3. Final Results
 
 | Product | Defined? | Result Dimension |
 |---------|----------|------------------|
@@ -85,7 +90,7 @@ Result dimension: 2 x 3.
 | AD | No | - |
 | DA | Yes | 2 x 3 |
 
-## Explanation
+### Explanation
 
 Matrix multiplication depends on the compatibility of the inner dimensions.
 

@@ -1,13 +1,13 @@
 
 # Problem 7: Using Properties Instead of Recomputing
-
-## Given
+## Question
+### Given
 
 det(A) = -4
 
 A is a 3x3 matrix.
-
-## 1. Calculate det(2A)
+## Solution
+### 1. Calculate det(2A)
 
 For an n x n matrix:
 
@@ -17,25 +17,25 @@ det(2A) = 2^3 * (-4)
 
 det(2A) = 8 * (-4) = -32
 
-## 2. Calculate det(A^T)
+### 2. Calculate det(A^T)
 
 The determinant of a transpose equals the determinant of the original matrix.
 
 det(A^T) = det(A) = -4
 
-## 3. Calculate det(A^2)
+### 3. Calculate det(A^2)
 
 det(A^2) = det(A) * det(A)
 
 det(A^2) = (-4) * (-4) = 16
 
-## 4. Calculate det(-A)
+### 4. Calculate det(-A)
 
 det(-A) = (-1)^3 * det(A)
 
 det(-A) = -1 * (-4) = 4
 
-## Final Results
+### Final Results
 
 det(2A) = -32
 

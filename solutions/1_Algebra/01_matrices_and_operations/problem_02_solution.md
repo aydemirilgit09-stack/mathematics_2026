@@ -1,6 +1,13 @@
 
 # Problem 02: Matrix Addition and Scalar Multiplication
+## Question
 
+Given matrices A and B:
+
+1. Calculate the matrix sum A + B.
+2. Calculate the matrix difference A - B.
+3. Calculate the expression 3A - 2B.
+ 
 ## Given
 
 A = [[1, 2],
@@ -9,7 +16,8 @@ A = [[1, 2],
 B = [[4, -2],
      [0, 5]]
 
-## 1. Matrix Addition (A + B)
+ ## Solution
+ ## 1. Matrix Addition (A + B)
 
 A + B = [[1+4, 2+(-2)],
          [-1+0, 3+5]]
