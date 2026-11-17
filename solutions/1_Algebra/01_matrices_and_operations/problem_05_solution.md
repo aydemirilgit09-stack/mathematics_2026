@@ -1,52 +1,43 @@
-
-# Problem 05: Matrix Times Vector
-
 ## Question
-### Given
-A = [[2, -1],
-     [1, 3]]
 
-x = [[4],
-     [2]]
+Let
+
+$$
+A=
+\begin{pmatrix}
+2 & -1 \\
+1 & 3 \\
+\end{pmatrix},\qquad x=
+\begin{pmatrix}
+4 \\
+2 \\
+\end{pmatrix}.
+$$
+
+Compute $Ax$. Then express $Ax$ as a linear combination of the columns of $A$, with coefficients coming from the vector $x$.
 
 ## Solution
-### 1. Calculate Ax
 
-Ax = [[2*4 + (-1)*2],
-      [1*4 + 3*2]]
+### Method
+A matrix $A$ of size $2 \times 2$ multiplied by a column vector $x$ of size $2 \times 1$ produces a $2 \times 1$ vector. This can be computed either using the row-by-column dot product definition or by taking a linear combination of the columns of $A$ weighted by the entries of $x$.
 
-Ax = [[8 - 2],
-      [4 + 6]]
+---
 
-Therefore:
+### Step 1: Compute $Ax$ via Row-by-Column Multiplication
+$$
+Ax = \begin{pmatrix} 2 & -1 \\ 1 & 3 \end{pmatrix} \begin{pmatrix} 4 \\ 2 \end{pmatrix} = \begin{pmatrix} 2(4) + (-1)(2) \\ 1(4) + 3(2) \end{pmatrix} = \begin{pmatrix} 8 - 2 \\ 4 + 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}
+$$
 
-Ax = [[6],
-      [10]]
+---
 
-### 2. Linear Combination of Columns
+### Step 2: Express $Ax$ as a Linear Combination of the Columns of $A$
+Let the columns of $A$ be $a_1 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$ and $a_2 = \begin{pmatrix} -1 \\ 3 \end{pmatrix}$, and the components of $x$ be $x_1 = 4$ and $x_2 = 2$. Then:
+$$
+Ax = x_1 a_1 + x_2 a_2 = 4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix}
+$$
 
-The columns of matrix A are:
-
-First column: [2, 1]^T
-
-Second column: [-1, 3]^T
-
-The vector x contains the coefficients 4 and 2.
-
-Therefore:
-
-Ax = 4*[2, 1]^T + 2*[-1, 3]^T
-
-Ax = [8, 4]^T + [-2, 6]^T
-
-Ax = [6, 10]^T
-
-### 3. Explanation
-
-Multiplying a matrix by a vector produces a linear combination of the columns of the matrix.
-
-The coefficients of this linear combination are the entries of the vector x.
-
-### Final Result
-
-Ax = [6, 10]^T
+### Verification
+Evaluating the linear combination directly confirms the result from Step 1:
+$$
+4 \begin{pmatrix} 2 \\ 1 \end{pmatrix} + 2 \begin{pmatrix} -1 \\ 3 \end{pmatrix} = \begin{pmatrix} 8 \\ 4 \end{pmatrix} + \begin{pmatrix} -2 \\ 6 \end{pmatrix} = \begin{pmatrix} 6 \\ 10 \end{pmatrix}.
+$$

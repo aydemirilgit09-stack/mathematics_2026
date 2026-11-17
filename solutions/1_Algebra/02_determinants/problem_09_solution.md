@@ -1,58 +1,52 @@
+# Problem 09: Area and the Determinant
 
-# Problem 9: Area and the Determinant
 ## Question
 ### Given
+The given vectors are:
 
-u = (3, 1)
+$$
+u=\begin{pmatrix}3\\1\end{pmatrix},
+\qquad
+v=\begin{pmatrix}1\\4\end{pmatrix}.
+$$
 
-v = (1, 4)
+These two vectors span a parallelogram in $\mathbb{R}^2$.
+
+### Find
+1. Compute the area of the parallelogram using the determinant.
+2. Reverse the order of the vectors and compute the new determinant.
+3. Explain how reversing the order changes the determinant and why the area remains unchanged.
+
 ## Solution
-### 1. Calculate the Determinant
 
-The vectors form a matrix:
+### 1. Compute the Determinant and Area of the Parallelogram
+Form the $2 \times 2$ matrix with columns $u$ and $v$:
+$$
+\det\begin{pmatrix} u & v \end{pmatrix} = \begin{vmatrix} 3 & 1 \\ 1 & 4 \end{vmatrix} = (3)(4) - (1)(1) = 12 - 1 = 11.
+$$
+The area of the parallelogram spanned by $u$ and $v$ is the absolute value of this determinant:
+$$
+\text{Area} = \left|\det\begin{pmatrix} u & v \end{pmatrix}\right| = |11| = 11.
+$$
 
-A = [[3, 1], [1, 4]]
+---
 
-det(A) = (3 * 4) - (1 * 1)
+### 2. Reverse the Order of the Vectors
+Form the $2 \times 2$ matrix with columns $v$ and $u$:
+$$
+\det\begin{pmatrix} v & u \end{pmatrix} = \begin{vmatrix} 1 & 3 \\ 4 & 1 \end{vmatrix} = (1)(1) - (3)(4) = 1 - 12 = -11.
+$$
+The area computed from the reversed order is:
+$$
+\text{Area} = \left|\det\begin{pmatrix} v & u \end{pmatrix}\right| = |-11| = 11.
+$$
 
-det(A) = 12 - 1
+---
 
-det(A) = 11
-
-### 2. Calculate the Area of the Parallelogram
-
-The area of a parallelogram is the absolute value of the determinant.
-
-Area = |det(A)|
-
-Area = |11|
-
-Area = 11 square units.
-
-### 3. Reverse the Order of the Vectors
-
-After reversing the vectors:
-
-A = [[1, 3], [4, 1]]
-
-det(A) = (1 * 1) - (3 * 4)
-
-det(A) = 1 - 12
-
-det(A) = -11
-
-### 4. Explanation
-
-Reversing the order of the vectors changes the sign of the determinant.
-
-However, the area remains unchanged because area is always non-negative.
+### 3. Geometric Explanation
+* **Effect on the determinant:** Swapping the two columns $u$ and $v$ multiplies the determinant by $-1$ (changing $11$ to $-11$). Geometrically, the sign of a $2 \times 2$ determinant encodes **orientation**: $(u, v)$ is positively oriented (counterclockwise from $u$ to $v$), whereas $(v, u)$ is negatively oriented (clockwise from $v$ to $u$).
+* **Why area is unchanged:** Reversing the order of the two spanning vectors does not change the geometric shape or size of the parallelogram itself; it only reverses the orientation. Because area is a non-negative geometric measure given by $|\det|$, we have $|-11| = |11| = 11$.
 
 ### Final Results
-
-Original determinant = 11
-
-Reversed determinant = -11
-
-Parallelogram area = 11 square units.
-
-The absolute value of the determinant represents the area.
+- $\det(u, v) = 11$, $\det(v, u) = -11$
+- Area of the parallelogram $= 11$

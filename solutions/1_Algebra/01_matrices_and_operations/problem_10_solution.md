@@ -1,70 +1,63 @@
-
 # Problem 10: Columns of a Matrix Product
+
 ## Question
 ### Given
+Given
 
-A = [[1, 2, 0],
-     [0, 1, 1]]
+$$
+A=
+\begin{pmatrix}
+1 & 2 & 0 \\
+0 & 1 & 1 \\
+\end{pmatrix},\qquad B=
+\begin{pmatrix}
+1 & 2 \\
+-1 & 0 \\
+3 & 1 \\
+\end{pmatrix}.
+$$
 
-B = [[1, 2],
-     [-1, 0],
-     [3, 1]]
+Denote the columns of $B$ by $b_1, b_2$.
 
-The columns of B are:
+### Find
+1. Compute $Ab_1$ and $Ab_2$.
+2. Compute the matrix $AB$.
+3. Compare the results and explain why the columns of $AB$ are exactly the vectors $Ab_1$ and $Ab_2$.
 
-b1 = [1, -1, 3]
-
-b2 = [2, 0, 1]
 ## Solution
-### 1. Calculate Ab1
 
-Ab1 = [[1, 2, 0],
-       [0, 1, 1]] * [1, -1, 3]
+### 1. Compute $Ab_1$ and $Ab_2$
+From matrix $B$, the two column vectors are:
+$$
+b_1 = \begin{pmatrix} 1 \\ -1 \\ 3 \end{pmatrix}, \qquad b_2 = \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix}.
+$$
 
-Ab1 = [1*1 + 2*(-1) + 0*3,
-       0*1 + 1*(-1) + 1*3]
+Multiply $A$ by each column vector:
+$$
+Ab_1 = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 1 \\ -1 \\ 3 \end{pmatrix} = \begin{pmatrix} 1(1) + 2(-1) + 0(3) \\ 0(1) + 1(-1) + 1(3) \end{pmatrix} = \begin{pmatrix} 1 - 2 + 0 \\ 0 - 1 + 3 \end{pmatrix} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}
+$$
 
-Ab1 = [-1, 2]
+$$
+Ab_2 = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 2 \\ 0 \\ 1 \end{pmatrix} = \begin{pmatrix} 1(2) + 2(0) + 0(1) \\ 0(2) + 1(0) + 1(1) \end{pmatrix} = \begin{pmatrix} 2 + 0 + 0 \\ 0 + 0 + 1 \end{pmatrix} = \begin{pmatrix} 2 \\ 1 \end{pmatrix}
+$$
 
-### 2. Calculate Ab2
+---
 
-Ab2 = [[1, 2, 0],
-       [0, 1, 1]] * [2, 0, 1]
+### 2. Compute the Matrix Product $AB$
+Since $A$ is $2 \times 3$ and $B$ is $3 \times 2$, $AB$ is a $2 \times 2$ matrix:
+$$
+AB = \begin{pmatrix} 1 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ -1 & 0 \\ 3 & 1 \end{pmatrix} = \begin{pmatrix} 1(1)+2(-1)+0(3) & 1(2)+2(0)+0(1) \\ 0(1)+1(-1)+1(3) & 0(2)+1(0)+1(1) \end{pmatrix} = \begin{pmatrix} -1 & 2 \\ 2 & 1 \end{pmatrix}
+$$
 
-Ab2 = [1*2 + 2*0 + 0*1,
-       0*2 + 1*0 + 1*1]
+---
 
-Ab2 = [2, 1]
-
-### 3. Calculate AB
-
-AB = [[1, 2, 0],
-      [0, 1, 1]] * [[1, 2],
-                     [-1, 0],
-                     [3, 1]]
-
-AB = [[-1, 2],
-      [2, 1]]
-
-### 4. Compare the Results
-
-Ab1 = [-1, 2]
-
-Ab2 = [2, 1]
-
-The columns of AB are exactly Ab1 and Ab2.
-
-### 5. Explanation
-
-When a matrix is multiplied by another matrix, each column of the second matrix is multiplied by the first matrix.
-
-Therefore, the columns of AB are obtained by calculating Ab1 and Ab2 separately.
+### 3. Comparison and Explanation
+* **Comparison:** The first column of $AB$ is $\begin{pmatrix} -1 \\ 2 \end{pmatrix} = Ab_1$, and the second column of $AB$ is $\begin{pmatrix} 2 \\ 1 \end{pmatrix} = Ab_2$. Thus, $AB = \begin{pmatrix} Ab_1 & Ab_2 \end{pmatrix}$.
+* **Explanation:** By definition of matrix multiplication, the $(i, j)$-th entry of $AB$ is the dot product of row $i$ of $A$ with column $j$ of $B$ ($b_j$). Collecting all rows $i = 1, \dots, m$ for a fixed column $j$ forms precisely the matrix-vector product $Ab_j$. Therefore, matrix multiplication acts column-by-column on the right factor:
+  $$
+  A \begin{pmatrix} b_1 & b_2 \end{pmatrix} = \begin{pmatrix} Ab_1 & Ab_2 \end{pmatrix}.
+  $$
 
 ### Final Results
-
-Ab1 = [-1, 2]
-
-Ab2 = [2, 1]
-
-AB = [[-1, 2],
-      [2, 1]]
+- $Ab_1 = \begin{pmatrix} -1 \\ 2 \end{pmatrix}$, $Ab_2 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}$
+- $AB = \begin{pmatrix} -1 & 2 \\ 2 & 1 \end{pmatrix}$

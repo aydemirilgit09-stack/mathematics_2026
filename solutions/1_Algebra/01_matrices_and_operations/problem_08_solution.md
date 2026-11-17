@@ -1,65 +1,75 @@
-# Problem 08: Row Operations and Their Reversibility
 ## Question
-### Given
 
-A = [[1, 2, -1],
-     [2, 4, 1],
-     [-1, 1, 3]]
+For
+
+$$
+A=
+\begin{pmatrix}
+1 & 2 & -1 \\
+2 & 4 & 1 \\
+-1 & 1 & 3 \\
+\end{pmatrix}
+$$
+
+perform, in order:
+
+1. $R_2\leftarrow R_2-2R_1$,
+2. $R_3\leftarrow R_3+R_1$,
+3. interchange $R_2$ and $R_3$.
+
+Write the matrix after each step. Then, for each of the three operations, state an operation that reverses it.
+
 ## Solution
-### 1. First Operation
 
-R2 <- R2 - 2R1
+### Method
+Elementary row operations transform a matrix without changing the solution set of the corresponding linear system. Every elementary row operation is invertible via a unique inverse elementary row operation.
 
-The new matrix is:
+---
 
-[[1, 2, -1],
- [0, 0, 3],
- [-1, 1, 3]]
+### Step-by-Step Row Operations
 
-Reverse operation:
+Starting matrix:
+$$
+A = \begin{pmatrix} 1 & 2 & -1 \\ 2 & 4 & 1 \\ -1 & 1 & 3 \end{pmatrix}
+$$
 
-R2 <- R2 + 2R1
+1. **Apply $R_2 \leftarrow R_2 - 2R_1$:**
+   Subtract $2 \times (1, 2, -1) = (2, 4, -2)$ from row 2:
+   $$
+   A_1 = \begin{pmatrix} 1 & 2 & -1 \\ 2-2 & 4-4 & 1-(-2) \\ -1 & 1 & 3 \end{pmatrix} = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 & 1 & 3 \end{pmatrix}
+   $$
 
-### 2. Second Operation
+2. **Apply $R_3 \leftarrow R_3 + R_1$:**
+   Add $(1, 2, -1)$ to row 3 of $A_1$:
+   $$
+   A_2 = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1+1 & 1+2 & 3+(-1) \end{pmatrix} = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ 0 & 3 & 2 \end{pmatrix}
+   $$
 
-R3 <- R3 + R1
+3. **Interchange $R_2$ and $R_3$ ($R_2 \leftrightarrow R_3$):**
+   Swap row 2 and row 3 of $A_2$:
+   $$
+   A_3 = \begin{pmatrix} 1 & 2 & -1 \\ 0 & 3 & 2 \\ 0 & 0 & 3 \end{pmatrix}
+   $$
 
-The new matrix is:
+---
 
-[[1, 2, -1],
- [0, 0, 3],
- [0, 3, 2]]
+### Inverse (Reversing) Operations
+To return from $A_3$ back to $A$, each step is reversed by:
+1. **Reverse of Step 1 ($R_2 \leftarrow R_2 - 2R_1$):** Add $2R_1$ back to $R_2$:
+   $$
+   R_2 \leftarrow R_2 + 2R_1
+   $$
+2. **Reverse of Step 2 ($R_3 \leftarrow R_3 + R_1$):** Subtract $R_1$ from $R_3$:
+   $$
+   R_3 \leftarrow R_3 - R_1
+   $$
+3. **Reverse of Step 3 (interchange $R_2$ and $R_3$):** Swap $R_2$ and $R_3$ again (a swap is its own inverse):
+   $$
+   \text{interchange } R_2 \text{ and } R_3 \quad (R_2 \leftrightarrow R_3)
+   $$
 
-Reverse operation:
-
-R3 <- R3 - R1
-
-### 3. Third Operation
-
-Interchange R2 and R3.
-
-The new matrix is:
-
-[[1, 2, -1],
- [0, 3, 2],
- [0, 0, 3]]
-
-Reverse operation:
-
-Interchange R2 and R3 again.
-
-### 4. Final Results
-
-Final matrix:
-
-[[1, 2, -1],
- [0, 3, 2],
- [0, 0, 3]]
-
-All three row operations are reversible.
-
-### Explanation
-
-Each row operation has an inverse operation that restores the previous matrix.
-
-These operations are useful in solving systems of linear equations and performing Gaussian elimination.
+### Verification
+Applying the reverse operations to $A_3$ in reverse order (3, then 2, then 1):
+* Swap $R_2 \leftrightarrow R_3$ gives $\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ 0 & 3 & 2 \end{pmatrix} = A_2$.
+* $R_3 \leftarrow R_3 - R_1$ gives $\begin{pmatrix} 1 & 2 & -1 \\ 0 & 0 & 3 \\ -1 & 1 & 3 \end{pmatrix} = A_1$.
+* $R_2 \leftarrow R_2 + 2R_1$ gives $\begin{pmatrix} 1 & 2 & -1 \\ 2 & 4 & 1 \\ -1 & 1 & 3 \end{pmatrix} = A$, recovering the original matrix.

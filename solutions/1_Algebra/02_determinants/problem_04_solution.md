@@ -1,36 +1,45 @@
+# Problem 04: Triangular Matrix
 
-# Problem 4: Triangular Matrix
 ## Question
 ### Given
+Consider the following upper triangular matrix:
 
-A = [[2, 4, 1], [0, -3, 5], [0, 0, 7]]
+$$
+A =
+\begin{pmatrix}
+2 & 4 & 1 \\
+0 & -3 & 5 \\
+0 & 0 & 7
+\end{pmatrix}.
+$$
+
+### Find
+1. Calculate the determinant of $A$ without expanding it.
+2. State the general rule for finding the determinant of a triangular matrix and explain why it applies here.
+
 ## Solution
-### 1. Calculate the Determinant
 
-The matrix is an upper triangular matrix.
+### 1. General Rule and Explanation
+**Rule:** The determinant of any triangular matrix (upper triangular, lower triangular, or diagonal) is equal to the **product of its main diagonal entries**:
+$$
+\det(A) = a_{11} \cdot a_{22} \cdots a_{nn}.
+$$
 
-For a triangular matrix, the determinant is the product of its diagonal entries.
+**Why it applies here:** Matrix $A$ is upper triangular because all entries below its main diagonal are zero ($a_{21} = 0$, $a_{31} = 0$, $a_{32} = 0$). If we repeatedly apply cofactor expansion down the first column, each step leaves only a single nonzero term on the diagonal, reducing the determinant directly to the product of the diagonal elements.
 
-det(A) = 2 * (-3) * 7
+---
 
-det(A) = -6 * 7
+### 2. Calculate $\det(A)$
+The main diagonal entries of $A$ are $a_{11} = 2$, $a_{22} = -3$, and $a_{33} = 7$. Multiplying them together:
+$$
+\det(A) = 2 \cdot (-3) \cdot 7 = (-6) \cdot 7 = -42.
+$$
 
-det(A) = -42
-
-### 2. General Rule
-
-For any upper or lower triangular matrix, the determinant equals the product of all diagonal entries.
-
-det(A) = a11 * a22 * a33 * ... * ann
-
-### 3. Explanation
-
-All entries below the main diagonal are zero.
-
-Therefore, we do not need to expand the determinant.
-
-We simply multiply the diagonal entries.
+### Verification
+Expanding along the first column confirms the formula:
+$$
+\det(A) = 2 \begin{vmatrix} -3 & 5 \\ 0 & 7 \end{vmatrix} - 0 + 0 = 2((-3)(7) - (5)(0)) = 2(-21) = -42.
+$$
 
 ### Final Result
-
-det(A) = -42
+- $\det(A) = -42$

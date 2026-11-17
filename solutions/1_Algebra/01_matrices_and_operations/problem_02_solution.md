@@ -1,70 +1,60 @@
-
-# Problem 02: Matrix Addition and Scalar Multiplication
 ## Question
 
-Given matrices A and B:
+For
 
-1. Calculate the matrix sum A + B.
-2. Calculate the matrix difference A - B.
-3. Calculate the expression 3A - 2B.
- 
-## Given
+$$
+A=
+\begin{pmatrix}
+1 & 2 \\
+-1 & 3 \\
+\end{pmatrix},\qquad B=
+\begin{pmatrix}
+4 & -2 \\
+0 & 5 \\
+\end{pmatrix}
+$$
 
-A = [[1, 2],
-     [-1, 3]]
+compute
 
-B = [[4, -2],
-     [0, 5]]
+$$
+A+B,\qquad A-B,\qquad 3A-2B.
+$$
 
- ## Solution
- ## 1. Matrix Addition (A + B)
+Explain why matrix addition is possible only for matrices of the same size.
 
-A + B = [[1+4, 2+(-2)],
-         [-1+0, 3+5]]
+## Solution
 
-A + B = [[5, 0],
-         [-1, 8]]
+### Method and Dimension Compatibility Condition
+Matrix addition and subtraction are defined **entry-by-entry** (element-wise). If $A = [a_{ij}]$ and $B = [b_{ij}]$ both have dimensions $m \times n$, then their sum $C = A + B$ also has dimensions $m \times n$ with entries $c_{ij} = a_{ij} + b_{ij}$. 
 
-## 2. Matrix Subtraction (A - B)
+**Why the same size is required:** Every entry $a_{ij}$ in row $i$ and column $j$ of the first matrix must pair with a corresponding entry $b_{ij}$ at the exact same position $(i, j)$ in the second matrix. If the matrices had different numbers of rows or columns, at least one entry would lack a counterpart to add to or subtract from, leaving the operation undefined. Here, both $A$ and $B$ are $2 \times 2$ matrices, so all operations are valid.
 
-A - B = [[1-4, 2-(-2)],
-         [-1-0, 3-5]]
+---
 
-A - B = [[-3, 4],
-         [-1, -2]]
+### Step-by-Step Computations
 
-## 3. Scalar Multiplication (3A - 2B)
+1. **Compute $A + B$:**
+   $$
+   A + B = \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} + \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 1+4 & 2+(-2) \\ -1+0 & 3+5 \end{pmatrix} = \begin{pmatrix} 5 & 0 \\ -1 & 8 \end{pmatrix}
+   $$
 
-First, calculate 3A:
+2. **Compute $A - B$:**
+   $$
+   A - B = \begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} - \begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 1-4 & 2-(-2) \\ -1-0 & 3-5 \end{pmatrix} = \begin{pmatrix} -3 & 4 \\ -1 & -2 \end{pmatrix}
+   $$
 
-3A = [[3, 6],
-      [-3, 9]]
+3. **Compute $3A - 2B$:**
+   First, multiply each matrix by its respective scalar:
+   $$
+   3A = 3\begin{pmatrix} 1 & 2 \\ -1 & 3 \end{pmatrix} = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix}, \qquad 2B = 2\begin{pmatrix} 4 & -2 \\ 0 & 5 \end{pmatrix} = \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix}
+   $$
+   Next, subtract $2B$ from $3A$:
+   $$
+   3A - 2B = \begin{pmatrix} 3 & 6 \\ -3 & 9 \end{pmatrix} - \begin{pmatrix} 8 & -4 \\ 0 & 10 \end{pmatrix} = \begin{pmatrix} 3-8 & 6-(-4) \\ -3-0 & 9-10 \end{pmatrix} = \begin{pmatrix} -5 & 10 \\ -3 & -1 \end{pmatrix}
+   $$
 
-Then, calculate 2B:
-
-2B = [[8, -4],
-      [0, 10]]
-
-Now subtract:
-
-3A - 2B = [[3-8, 6-(-4)],
-           [-3-0, 9-10]]
-
-3A - 2B = [[-5, 10],
-           [-3, -1]]
-
-## 4. Explanation
-
-Matrix addition is possible only when both matrices have the same dimensions.
-
-This is because matrix addition is performed by adding corresponding entries in the same positions.
-
-Both matrices A and B have dimensions 2 x 2, so addition and subtraction are possible.
-
-## Final Results
-
-A + B = [[5, 0], [-1, 8]]
-
-A - B = [[-3, 4], [-1, -2]]
-
-3A - 2B = [[-5, 10], [-3, -1]]
+### Verification
+We can verify $A + B$ and $A - B$ by adding them together, which must yield $2A$:
+$$
+(A + B) + (A - B) = \begin{pmatrix} 5 & 0 \\ -1 & 8 \end{pmatrix} + \begin{pmatrix} -3 & 4 \\ -1 & -2 \end{pmatrix} = \begin{pmatrix} 2 & 4 \\ -2 & 6 \end{pmatrix} = 2A.
+$$
