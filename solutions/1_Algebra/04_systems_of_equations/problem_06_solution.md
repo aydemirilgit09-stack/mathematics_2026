@@ -1,5 +1,19 @@
 # Problem 6: A System with a Parameter — Which Cases Actually Occur?
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+x+y=2, \\
+ax+ay=4.
+\end{cases}
+$$
+
+### Find
+Analyze, depending on the parameter $a$, among the possibilities exactly one solution, infinitely many solutions, and no solution. Determine which actually occur and for which values of $a$. If one type cannot occur, explain why.
+
 ## Solution
 
 We analyze the system depending on the parameter $a \in \mathbb{R}$:

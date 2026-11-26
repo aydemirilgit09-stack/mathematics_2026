@@ -1,5 +1,20 @@
 # Problem 12: Homogeneous System
 
+## Question
+### Given
+The homogeneous system
+
+$$
+\begin{cases}
+x+2y-z=0, \\
+2x+4y-2z=0, \\
+x-y+2z=0.
+\end{cases}
+$$
+
+### Find
+Solve and give all solutions in parametric form. Explain why $(0,0,0)$ always satisfies a homogeneous system.
+
 ## Solution
 
 We are given the homogeneous system of linear equations:

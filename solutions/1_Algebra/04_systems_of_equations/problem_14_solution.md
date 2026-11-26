@@ -1,5 +1,30 @@
 # Problem 14: A Small Change in the Right-Hand Side
 
+## Question
+### Given
+The systems
+
+$$
+\begin{cases}
+x+y=2, \\
+2x-y=1, \\
+3x=3
+\end{cases}
+$$
+
+and
+
+$$
+\begin{cases}
+x+y=2, \\
+2x-y=1, \\
+3x=3.1.
+\end{cases}
+$$
+
+### Find
+Check the consistency of each system and explain why a small change in one number can change the type of the system.
+
 ## Solution
 
 We compare the two overdetermined systems:

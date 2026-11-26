@@ -1,5 +1,20 @@
 # Problem 2: Gaussian Elimination — One Solution
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+x+y+z=6, \\
+2x-y+z=3, \\
+x+2y-z=2.
+\end{cases}
+$$
+
+### Find
+Solve using Gaussian elimination. After solving, substitute the result into all equations and check consistency.
+
 ## Solution
 
 We are given the system of linear equations:

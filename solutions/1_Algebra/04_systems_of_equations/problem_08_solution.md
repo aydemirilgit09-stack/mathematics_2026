@@ -1,5 +1,28 @@
 # Problem 8: Two Systems with the Same Coefficient Matrix
 
+## Question
+### Given
+The systems
+
+$$
+\begin{cases}
+2x+y=5, \\
+x-y=1,
+\end{cases}
+$$
+
+and
+
+$$
+\begin{cases}
+2x+y=1, \\
+x-y=4.
+\end{cases}
+$$
+
+### Find
+Solve both systems by elimination. Compare the successive elimination steps. Identify which part of the calculation is the same in both cases and explain why.
+
 ## Solution
 
 We solve both systems by elimination:

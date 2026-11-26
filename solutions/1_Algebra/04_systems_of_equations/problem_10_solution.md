@@ -1,5 +1,12 @@
 # Problem 10: A Polynomial Through Three Points
 
+## Question
+### Given
+A polynomial $p(x)=ax^2+bx+c$ whose graph passes through $(0,1)$, $(1,3)$, and $(2,9)$.
+
+### Find
+Find the polynomial. Reduce the problem to a system of equations and check the result by substituting all three points.
+
 ## Solution
 
 We want to find $p(x) = ax^2 + bx + c$ passing through $(0, 1)$, $(1, 3)$, and $(2, 9)$.

@@ -1,5 +1,20 @@
 # Problem 1: From a System to a Matrix
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+2x-y+z=4, \\
+x+3y-2z=1, \\
+3x+y+z=7.
+\end{cases}
+$$
+
+### Find
+Write the system in the form $Ax=b$. Identify the coefficient matrix, the vector of unknowns, and the right-hand side vector. Explain how each row of the matrix corresponds to one equation.
+
 ## Solution
 
 We are given the following system of linear equations:

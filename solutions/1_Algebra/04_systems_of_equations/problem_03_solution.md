@@ -1,5 +1,19 @@
 # Problem 3: Inconsistent System
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+x+2y=3, \\
+2x+4y=7.
+\end{cases}
+$$
+
+### Find
+Solve or show that the system is inconsistent. Show how the contradiction appears in the matrix after elimination and interpret it in terms of equations.
+
 ## Solution
 
 We are given the system:

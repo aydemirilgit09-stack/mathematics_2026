@@ -1,5 +1,20 @@
 # Problem 5: Row Echelon Form and Number of Solutions
 
+## Question
+### Given
+The augmented matrix
+
+$$
+\begin{pmatrix}
+1 & 2 & -1 & \mid & 3 \\
+0 & 1 & 2 & \mid & 1 \\
+0 & 0 & 0 & \mid & 0
+\end{pmatrix}
+$$
+
+### Find
+Determine the number of solutions and write them in parametric form. Explain how you know how many variables may be chosen freely.
+
 ## Solution
 
 We are given the augmented matrix in row echelon form:

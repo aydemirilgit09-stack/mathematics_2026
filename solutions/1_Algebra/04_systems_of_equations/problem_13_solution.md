@@ -1,5 +1,16 @@
 # Problem 13: Does Every Equation Add New Information?
 
+## Question
+### Given
+The system
+
+$$
+x_1+x_2=10,\qquad x_2+x_3=8,\qquad x_1-x_3=2.
+$$
+
+### Find
+Solve the system and check whether all three equations are independently necessary to describe the solution set. If one follows from the others, show this by calculation.
+
 ## Solution
 
 We are given the system:

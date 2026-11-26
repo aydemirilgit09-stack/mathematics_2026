@@ -1,5 +1,37 @@
 # Problem 15: Classifying Three Systems
 
+## Question
+### Given
+**System 1**
+
+$$
+\begin{cases}
+x+y=2, \\
+x-y=0,
+\end{cases}
+$$
+
+**System 2**
+
+$$
+\begin{cases}
+x+y=2, \\
+2x+2y=4,
+\end{cases}
+$$
+
+**System 3**
+
+$$
+\begin{cases}
+x+y=2, \\
+2x+2y=5.
+\end{cases}
+$$
+
+### Find
+For each system, perform only as much elimination as necessary to recognize its type. Justify the classification: one solution, infinitely many solutions, or no solution.
+
 ## Solution
 
 We perform minimal elimination on each system to classify its solution set:

@@ -1,5 +1,16 @@
 # Problem 9: A System from a Sum Condition
 
+## Question
+### Given
+The conditions
+
+$$
+x+y=10,\qquad 2x+5y=32.
+$$
+
+### Find
+Find the numbers $x,y$ satisfying both conditions. Solve the system and explain geometrically why the solution is unique.
+
 ## Solution
 
 We are given the system of linear equations:

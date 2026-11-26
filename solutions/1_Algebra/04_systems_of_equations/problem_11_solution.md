@@ -1,5 +1,20 @@
 # Problem 11: A Parameter in a System of Three Equations
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+x+y+z=1, \\
+x+ty+z=2, \\
+x+y+tz=3.
+\end{cases}
+$$
+
+### Find
+Analyze the number of solutions depending on $t$. Use elimination and separately analyze the parameter values for which a standard calculation step ceases to be valid.
+
 ## Solution
 
 We analyze the system depending on the parameter $t \in \mathbb{R}$:

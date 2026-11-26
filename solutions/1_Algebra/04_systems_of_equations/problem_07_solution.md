@@ -1,5 +1,25 @@
 # Problem 7: Choosing a Method Deliberately
 
+## Question
+### Given
+Do not solve all of the following systems completely:
+
+1. A system with a triangular coefficient matrix:
+
+$$
+\begin{cases}
+2x-y=3, \\
+4y=8;
+\end{cases}
+$$
+
+2. Three systems $Ax=b_i$ with the same invertible matrix $A$, when $A^{-1}$ is already known.
+
+3. A $3\times3$ system for which the inverse matrix is not given and the goal is only to find one solution vector.
+
+### Find
+For each situation, choose the method that best uses its structure and justify your choice. For case 1, carry out the chosen method completely. For cases 2 and 3, describe the plan and indicate which part of the computation would be reusable or unnecessary.
+
 ## Solution
 
 ### 1. Triangular System — Direct Back-Substitution

@@ -1,5 +1,20 @@
 # Problem 4: Infinitely Many Solutions
 
+## Question
+### Given
+The system
+
+$$
+\begin{cases}
+x+y+z=2, \\
+2x+2y+2z=4, \\
+x-y+z=0.
+\end{cases}
+$$
+
+### Find
+Solve and give the solution in parametric form. Identify a free variable, and for one chosen parameter value check that the resulting point satisfies the system.
+
 ## Solution
 
 We are given the system:
